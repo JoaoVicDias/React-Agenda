@@ -1,0 +1,33 @@
+.search__form{
+    margin:  auto;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.377);;
+    border-radius: 4px;
+    padding: 0.2rem;
+    width: 55vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.search__form__h4{
+    font: 700 1.1rem "roboto";
+}
+
+.search__form__input{
+    width: 40%;
+    border: 1px solid rgba(0, 0, 0, 0.295);
+    padding: 0.3rem;
+    border-radius: 3px;
+    outline: none;
+    font:1rem "Roboto";
+}
+
+@media(max-width:640px){
+    .search__form{
+        width: 90vw;
+    }
+    
+    .search__form__input{
+        width: 45%;
+    }
+}

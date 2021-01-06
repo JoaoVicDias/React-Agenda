@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{Component} from 'react'
+import IndexPage from './conteiners/indexPage/indexPage'
+import AuthPage from './conteiners/authPage/authPage'
+import {Route,Switch,Redirect} from 'react-router-dom'
+import {connect} from 'react-redux'
+import Logout from './conteiners/authPage/logout/logout'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+class App extends Component {
+
+  
+  render(){
+    return (
+      <React.Fragment>
+        <Switch>
+        {this.props.token ? <Route  path="/logout" exact component={Logout}/> :null}
+        <Route  path="/auth" exact component={AuthPage}/>
+        <Route  path="/" exact component={IndexPage} />
+        <Redirect to="/" />
+        </Switch>
+      </React.Fragment>
+    )  
+  }
+  
+   
 }
 
-export default App;
+const  mapStateToProps = state =>{
+  return {
+    token:state.token
+  }
+}
+
+export default connect(mapStateToProps)(App);

@@ -1,0 +1,31 @@
+.input__form{
+    width: 98%;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    font: 1.2rem 'inherit' ;
+    text-align: center;
+}
+
+.input__form__error{
+    border-bottom: 2px solid rgb(247, 102, 102);
+}
+
+
+textarea{
+    resize: none;
+}
+
+.textarea_form{
+    width: 98%;
+    outline: none;
+    border: none;
+    text-align: center;
+    border-bottom: 2px solid black;
+    font: 1.2rem 'inherit' ;
+    height: 10vh;
+}
+
+.textarea_form__error{
+    border-bottom: 2px solid rgb(247, 102, 102);
+}

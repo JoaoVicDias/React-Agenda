@@ -1,0 +1,24 @@
+.header__item{
+    list-style: none;
+    margin:0 1rem ;
+    display: block;
+}
+
+.header__item a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.header__item:hover a,
+.header__item:active a{
+    color: grey;
+}
+
+
+
+@media(max-width:640px){
+    .header__item{
+        margin:1rem 0;
+    }
+}

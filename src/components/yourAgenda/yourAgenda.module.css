@@ -1,0 +1,46 @@
+.title__notes{
+    margin: 3rem auto;   
+    width: 55vw;
+}
+
+.title__notes h1{
+    font-weight: 700;
+    color: black;
+    display: inline-block;
+    margin: 0;
+}
+
+.title__notes hr{
+    border: 2px solid;
+    width: 100%;
+}
+
+.div__notes{
+    margin: 3rem auto;   
+    width: 55vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.error__login{
+    margin: 10px auto;
+    font-size: 2rem;
+}
+
+@media(max-width:640px){
+    .title__notes{
+        width: 90vw;
+    }
+
+    .div__notes{
+        width: 90vw;
+    }
+}
+
+@media(max-width:570px){
+    .div__notes{
+       flex-flow: column;
+       align-items: center;
+       justify-content: center;
+    }
+}
